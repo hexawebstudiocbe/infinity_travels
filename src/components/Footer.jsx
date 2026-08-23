@@ -93,32 +93,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* QR Code */}
-          <div style={{ textAlign: 'center' }}>
-            <h3 style={{ color: 'var(--color-gold)', fontSize: '1.1rem', marginBottom: '20px' }}>SCAN TO CONNECT</h3>
-            <div style={{ 
-              backgroundColor: '#fff', 
-              padding: '10px', 
-              display: 'inline-block',
-              borderRadius: '8px',
-              marginBottom: '10px'
-            }}>
-              {/* Placeholder for QR Code */}
-              <div style={{ 
-                width: '120px', 
-                height: '120px', 
-                border: '2px dashed #ccc',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#888',
-                fontSize: '0.8rem'
-              }}>
-                QR Code Here
-              </div>
-            </div>
-            <p style={{ fontSize: '0.85rem' }}>Scan QR Code to<br/>WhatsApp Us</p>
-          </div>
+
 
         </div>
 

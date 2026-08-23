@@ -21,6 +21,24 @@ const Hero = () => {
       overflow: 'hidden'
     }}>
 
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          zIndex: 0
+        }}
+      >
+        <source src="/vid.mp4" type="video/mp4" />
+      </video>
 
       {/* Dark overlay to make text readable */}
       <div style={{
