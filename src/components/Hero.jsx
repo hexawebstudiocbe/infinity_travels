@@ -60,16 +60,16 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           style={{ maxWidth: '600px' }}
         >
-          <h2 style={{ fontSize: '1.5rem', fontWeight: 300, letterSpacing: '4px', color: '#fff', marginBottom: '10px' }}>
+          <h2 style={{ fontSize: 'clamp(1rem, 3vw, 1.5rem)', fontWeight: 300, letterSpacing: '4px', color: '#fff', marginBottom: '10px' }}>
             EXPLORE THE WORLD
           </h2>
           <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '10px' }}>
             <div style={{ height: '1px', backgroundColor: 'var(--color-gold)', width: '60px' }}></div>
-            <span style={{ fontSize: '1.2rem', letterSpacing: '2px' }}>WITH</span>
+            <span style={{ fontSize: 'clamp(0.9rem, 2vw, 1.2rem)', letterSpacing: '2px' }}>WITH</span>
             <div style={{ height: '1px', backgroundColor: 'var(--color-gold)', width: '60px' }}></div>
           </div>
           <h1 style={{ 
-            fontSize: '4.5rem', 
+            fontSize: 'clamp(2.5rem, 8vw, 4.5rem)', 
             fontWeight: 700, 
             lineHeight: 1.1, 
             marginBottom: '20px',
@@ -78,7 +78,7 @@ const Hero = () => {
             INFINITY<br/>VACATIONS
           </h1>
           <p style={{ 
-            fontSize: '1.5rem', 
+            fontSize: 'clamp(1rem, 3vw, 1.5rem)', 
             fontStyle: 'italic',
             color: '#ddd',
             marginBottom: '40px',

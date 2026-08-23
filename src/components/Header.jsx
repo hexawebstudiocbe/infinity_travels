@@ -64,11 +64,60 @@ const Header = () => {
           </ul>
         </nav>
 
-        {/* Action Button */}
-        <div>
+        {/* Mobile Toggle Button */}
+        <div className="mobile-toggle" style={{ display: 'flex', alignItems: 'center' }}>
+          <button 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            style={{ 
+              background: 'transparent', 
+              color: 'var(--color-gold)', 
+              fontSize: '1.5rem',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
+          >
+            {mobileMenuOpen ? '✕' : '☰'}
+          </button>
+        </div>
+
+        {/* Desktop Action Button */}
+        <div className="nav-menu">
           <button className="gold-btn">ENQUIRE NOW</button>
         </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {mobileMenuOpen && (
+        <div style={{
+          position: 'absolute',
+          top: '100%',
+          left: 0,
+          width: '100%',
+          backgroundColor: 'rgba(15, 15, 15, 0.98)',
+          padding: '20px',
+          borderBottom: '1px solid #333'
+        }}>
+          <ul style={{ 
+            display: 'flex', 
+            flexDirection: 'column',
+            listStyle: 'none', 
+            gap: '15px', 
+            margin: 0, 
+            padding: 0,
+            textAlign: 'center'
+          }}>
+            <li><a href="#" style={{ color: 'var(--color-gold)', fontSize: '1.1rem', fontWeight: 600 }}>HOME</a></li>
+            <li><a href="#" style={{ fontSize: '1.1rem', fontWeight: 500 }}>ABOUT US</a></li>
+            <li><a href="#" style={{ fontSize: '1.1rem', fontWeight: 500 }}>PACKAGES ▾</a></li>
+            <li><a href="#" style={{ fontSize: '1.1rem', fontWeight: 500 }}>SERVICES ▾</a></li>
+            <li><a href="#" style={{ fontSize: '1.1rem', fontWeight: 500 }}>GALLERY</a></li>
+            <li><a href="#" style={{ fontSize: '1.1rem', fontWeight: 500 }}>BLOG</a></li>
+            <li><a href="#" style={{ fontSize: '1.1rem', fontWeight: 500 }}>CONTACT US</a></li>
+            <li style={{ marginTop: '10px' }}><button className="gold-btn" style={{ width: '100%' }}>ENQUIRE NOW</button></li>
+          </ul>
+        </div>
+      )}
     </motion.header>
   );
 };
