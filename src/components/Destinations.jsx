@@ -16,11 +16,7 @@ const Destinations = () => {
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '50px' }}>
           <h2 className="section-title" style={{ color: '#fff' }}>
-            <span style={{ position: 'relative', display: 'inline-block' }}>
-              <span style={{ position: 'absolute', left: '-80px', top: '50%', width: '60px', height: '2px', backgroundColor: 'var(--color-gold)' }}></span>
-              TOP DESTINATIONS
-              <span style={{ position: 'absolute', right: '-80px', top: '50%', width: '60px', height: '2px', backgroundColor: 'var(--color-gold)' }}></span>
-            </span>
+            TOP DESTINATIONS
           </h2>
           <p className="section-subtitle" style={{ color: '#555' }}>Discover the world with our best selling tour packages</p>
         </div>

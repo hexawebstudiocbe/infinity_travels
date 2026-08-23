@@ -17,11 +17,7 @@ const WhyChooseUs = () => {
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '50px' }}>
           <h2 className="section-title">
-            <span style={{ position: 'relative', display: 'inline-block' }}>
-              <span style={{ position: 'absolute', left: '-80px', top: '50%', width: '60px', height: '1px', backgroundColor: 'var(--color-gold)' }}></span>
-              WHY CHOOSE US?
-              <span style={{ position: 'absolute', right: '-80px', top: '50%', width: '60px', height: '1px', backgroundColor: 'var(--color-gold)' }}></span>
-            </span>
+            WHY CHOOSE US?
           </h2>
         </div>
 

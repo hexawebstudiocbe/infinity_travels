@@ -4,6 +4,7 @@ import { FaFacebookF, FaInstagram, FaWhatsapp, FaTwitter } from 'react-icons/fa'
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
