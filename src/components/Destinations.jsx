@@ -56,7 +56,7 @@ const Destinations = () => {
                 <h3 style={{ fontSize: '1.2rem', color: '#fff', marginBottom: '10px', letterSpacing: '1px' }}>{dest.name}</h3>
                 <p style={{ color: '#aaa', fontSize: '0.9rem', marginBottom: '15px' }}>{dest.duration}</p>
                 <div style={{ 
-                  backgroundColor: 'var(--color-gold-light)', 
+                  backgroundColor: '#e8ae2c', 
                   display: 'inline-block',
                   padding: '5px 15px',
                   borderRadius: '4px',
@@ -72,22 +72,7 @@ const Destinations = () => {
         </div>
 
         <div style={{ textAlign: 'center' }}>
-          <button style={{
-            backgroundColor: '#111',
-            color: 'var(--color-gold)',
-            padding: '12px 30px',
-            border: '1px solid var(--color-gold)',
-            borderRadius: '4px',
-            fontSize: '1rem',
-            fontWeight: '500',
-            transition: 'all 0.3s ease',
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '10px'
-          }}
-          onMouseOver={e => { e.currentTarget.style.backgroundColor = 'var(--color-gold)'; e.currentTarget.style.color = '#111'; }}
-          onMouseOut={e => { e.currentTarget.style.backgroundColor = '#111'; e.currentTarget.style.color = 'var(--color-gold)'; }}
-          >
+          <button className="gold-btn" style={{ fontSize: '1rem', padding: '12px 30px' }}>
             VIEW ALL PACKAGES <span>›</span>
           </button>
         </div>

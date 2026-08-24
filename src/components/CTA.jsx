@@ -58,7 +58,7 @@ const CTA = () => {
           <div>
             <button style={{
               backgroundColor: '#111',
-              color: 'var(--color-gold)',
+              color: '#e8ae2c',
               padding: '15px 40px',
               border: 'none',
               borderRadius: '4px',
