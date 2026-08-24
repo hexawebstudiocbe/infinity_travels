@@ -41,7 +41,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 style={{ color: 'var(--color-gold)', fontSize: '1.1rem', marginBottom: '20px' }}>QUICK LINKS</h3>
+            <h3 style={{ color: '#e8ae2c', fontSize: '1.1rem', marginBottom: '20px' }}>QUICK LINKS</h3>
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {['Home', 'About Us', 'Tour Packages', 'Services', 'Gallery', 'Blog', 'Contact Us'].map((link, idx) => (
                 <li key={idx}>
@@ -56,7 +56,7 @@ const Footer = () => {
 
           {/* Our Services */}
           <div>
-            <h3 style={{ color: 'var(--color-gold)', fontSize: '1.1rem', marginBottom: '20px' }}>OUR SERVICES</h3>
+            <h3 style={{ color: '#e8ae2c', fontSize: '1.1rem', marginBottom: '20px' }}>OUR SERVICES</h3>
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {['Flight Booking', 'Hotel Booking', 'Visa Assistance', 'Travel Insurance', 'Airport Transfers', 'Group & Corporate Tours', 'Honeymoon Packages'].map((link, idx) => (
                 <li key={idx}>
@@ -71,7 +71,7 @@ const Footer = () => {
 
           {/* Contact Us */}
           <div>
-            <h3 style={{ color: 'var(--color-gold)', fontSize: '1.1rem', marginBottom: '20px' }}>CONTACT US</h3>
+            <h3 style={{ color: '#e8ae2c', fontSize: '1.1rem', marginBottom: '20px' }}>CONTACT US</h3>
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '15px' }}>
               <li style={{ display: 'flex', gap: '10px', fontSize: '0.9rem' }}>
                 <FaPhoneAlt style={{ color: 'var(--color-gold)', marginTop: '4px' }} />

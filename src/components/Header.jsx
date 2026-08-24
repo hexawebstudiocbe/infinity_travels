@@ -84,7 +84,7 @@ const Header = () => {
 
         {/* Desktop Action Button */}
         <div className="nav-menu">
-          <button className="gold-btn">ENQUIRE NOW</button>
+          <button className="gold-btn">EXPLORE</button>
         </div>
       </div>
 
@@ -115,7 +115,7 @@ const Header = () => {
             <li><a href="#" style={{ fontSize: '1.1rem', fontWeight: 500 }}>GALLERY</a></li>
             <li><a href="#" style={{ fontSize: '1.1rem', fontWeight: 500 }}>BLOG</a></li>
             <li><a href="#" style={{ fontSize: '1.1rem', fontWeight: 500 }}>CONTACT US</a></li>
-            <li style={{ marginTop: '10px' }}><button className="gold-btn" style={{ width: '100%' }}>ENQUIRE NOW</button></li>
+            <li style={{ marginTop: '10px' }}><button className="gold-btn" style={{ width: '100%' }}>EXPLORE</button></li>
           </ul>
         </div>
       )}

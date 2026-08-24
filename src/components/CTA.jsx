@@ -72,7 +72,7 @@ const CTA = () => {
             onMouseOver={e => { e.currentTarget.style.backgroundColor = '#222'; e.currentTarget.style.transform = 'translateY(-2px)' }}
             onMouseOut={e => { e.currentTarget.style.backgroundColor = '#111'; e.currentTarget.style.transform = 'translateY(0)' }}
             >
-              ENQUIRE NOW <span>›</span>
+              EXPLORE <span>›</span>
             </button>
           </div>
         </motion.div>

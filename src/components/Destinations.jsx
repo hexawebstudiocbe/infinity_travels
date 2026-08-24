@@ -15,7 +15,7 @@ const Destinations = () => {
     <section className="section-padding" style={{ backgroundColor: 'var(--bg-dark)' }}>
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-          <h2 className="section-title" style={{ color: '#fff' }}>
+          <h2 className="section-title" style={{ color: '#e8ae2c' }}>
             TOP DESTINATIONS
           </h2>
           <p className="section-subtitle" style={{ color: '#555' }}>Discover the world with our best selling tour packages</p>
@@ -64,7 +64,7 @@ const Destinations = () => {
                   fontWeight: '600',
                   fontSize: '0.9rem'
                 }}>
-                  Enquire Now
+                  Explore
                 </div>
               </div>
             </motion.div>

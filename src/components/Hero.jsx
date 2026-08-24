@@ -73,7 +73,8 @@ const Hero = () => {
             fontWeight: 700, 
             lineHeight: 1.1, 
             marginBottom: '20px',
-            textShadow: '0 4px 10px rgba(0,0,0,0.5)'
+            textShadow: '0 4px 10px rgba(0,0,0,0.5)',
+            color: '#e8ae2c'
           }}>
             INFINITY<br/>VACATIONS
           </h1>

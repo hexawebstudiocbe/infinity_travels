@@ -16,7 +16,7 @@ const WhyChooseUs = () => {
     <section className="section-padding" style={{ backgroundColor: 'var(--bg-darker)' }}>
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-          <h2 className="section-title">
+          <h2 className="section-title" style={{ color: '#e8ae2c' }}>
             WHY CHOOSE US?
           </h2>
         </div>

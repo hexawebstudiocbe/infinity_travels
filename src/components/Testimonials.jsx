@@ -25,7 +25,7 @@ const Testimonials = () => {
     <section className="section-padding" style={{ backgroundColor: 'var(--bg-dark)' }}>
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-          <h2 className="section-title" style={{ color: '#fff' }}>
+          <h2 className="section-title" style={{ color: '#e8ae2c' }}>
             WHAT OUR CLIENTS SAY
           </h2>
         </div>
