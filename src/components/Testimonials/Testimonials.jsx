@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaStar, FaQuoteLeft } from 'react-icons/fa';
+import './Testimonials.css';
 
 const testimonials = [
   {
@@ -22,19 +23,15 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="section-padding" style={{ backgroundColor: 'var(--bg-dark)' }}>
+    <section className="section-padding bg-dark">
       <div className="container">
-        <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-          <h2 className="section-title" style={{ color: '#e8ae2c' }}>
+        <div className="testimonials-header">
+          <h2 className="section-title text-gold">
             WHAT OUR CLIENTS SAY
           </h2>
         </div>
 
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-          gap: '30px'
-        }}>
+        <div className="testimonials-grid">
           {testimonials.map((item, index) => (
             <motion.div 
               key={index}
@@ -42,39 +39,24 @@ const Testimonials = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              style={{
-                backgroundColor: 'var(--bg-card)',
-                padding: '30px',
-                borderRadius: '12px',
-                boxShadow: '0 5px 20px rgba(0,0,0,0.3)',
-                position: 'relative'
-              }}
+              className="testimonial-card"
             >
-              <div style={{ position: 'absolute', top: '20px', left: '20px', color: 'rgba(198, 156, 56, 0.1)', fontSize: '3rem' }}>
+              <div className="testimonial-quote-icon">
                 <FaQuoteLeft />
               </div>
-              <p style={{ 
-                color: '#ddd', 
-                fontSize: '0.95rem', 
-                lineHeight: 1.6, 
-                marginBottom: '20px',
-                position: 'relative',
-                zIndex: 1,
-                minHeight: '80px',
-                marginTop: '10px'
-              }}>
+              <p className="testimonial-text">
                 {item.text}
               </p>
               
-              <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+              <div className="testimonial-author">
                 <img 
                   src={item.img} 
                   alt={item.name} 
-                  style={{ width: '60px', height: '60px', borderRadius: '50%', objectFit: 'cover' }} 
+                  className="testimonial-img"
                 />
                 <div>
-                  <h4 style={{ color: '#fff', fontSize: '1rem', marginBottom: '5px' }}>{item.name}</h4>
-                  <div style={{ color: 'var(--color-gold)', display: 'flex', gap: '2px', fontSize: '0.9rem' }}>
+                  <h4 className="testimonial-name">{item.name}</h4>
+                  <div className="testimonial-stars">
                     <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                   </div>
                 </div>

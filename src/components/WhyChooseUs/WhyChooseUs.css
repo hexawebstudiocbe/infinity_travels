@@ -1,0 +1,52 @@
+.bg-darker {
+  background-color: var(--bg-darker);
+}
+
+.text-gold {
+  color: var(--color-primary);
+}
+
+.why-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  text-align: center;
+}
+
+.why-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.why-icon-container {
+  color: var(--color-primary);
+  font-size: 2.5rem;
+  border: 1px solid var(--border-light);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.why-item:hover .why-icon-container {
+  background-color: var(--color-primary);
+  color: var(--bg-darker);
+}
+
+.why-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-main);
+  white-space: pre-line;
+  letter-spacing: 1px;
+}

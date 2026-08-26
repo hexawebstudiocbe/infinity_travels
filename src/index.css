@@ -1,15 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
-  --bg-dark: #0f0f0f;
-  --bg-darker: #050505;
-  --bg-card: #1c1c1c;
-  --color-gold: #D4AF37;
-  --color-gold-hover: #F7D26A;
-  --color-gold-light: #F7D26A;
-  --color-gold-accent: #D4AF37;
-  --text-main: #F5F5F5;
-  --text-muted: #B5B5B5;
+  --bg-dark: #ffffff;
+  --bg-darker: #f5f5f5;
+  --bg-card: #ffffff;
+  --bg-footer: #f9f9f9;
+  --color-primary: #ff7b00;
+  --color-primary-hover: #ea580c;
+  --color-primary-light: rgba(255, 123, 0, 0.1);
+  --color-primary-accent: #ff7b00;
+  --text-main: #111111;
+  --text-muted: #555555;
+  --text-dim: #777777;
+  --text-dark: #000000;
+  --text-sub: #444444;
+  --text-aaa: #aaaaaa;
+  --border-color: #e5e5e5;
+  --border-light: rgba(255, 123, 0, 0.3);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --shadow-light: rgba(0, 0, 0, 0.05);
 
   --font-serif: 'Playfair Display', serif;
   --font-sans: 'Inter', sans-serif;
@@ -37,7 +46,7 @@ h5,
 h6 {
   font-family: var(--font-serif);
   font-weight: 600;
-  color: var(--color-gold);
+  color: var(--color-primary);
 }
 
 a {
@@ -47,7 +56,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-gold);
+  color: var(--color-primary);
 }
 
 button {
@@ -64,8 +73,8 @@ button {
   padding: 0 20px;
 }
 
-.gold-btn {
-  background-color: var(--color-gold);
+.primary-btn {
+  background-color: var(--color-primary);
   color: #000;
   padding: 12px 24px;
   font-weight: 600;
@@ -77,8 +86,8 @@ button {
   gap: 8px;
 }
 
-.gold-btn:hover {
-  background-color: var(--color-gold-hover);
+.primary-btn:hover {
+  background-color: var(--color-primary-hover);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(198, 156, 56, 0.3);
 }
@@ -99,7 +108,7 @@ button {
   content: '';
   height: 1px;
   width: 60px;
-  background-color: var(--color-gold);
+  background-color: var(--color-primary);
 }
 
 .section-subtitle {
@@ -143,6 +152,7 @@ button {
 }
 
 @media (max-width: 768px) {
+
   .section-title::before,
   .section-title::after {
     display: none;

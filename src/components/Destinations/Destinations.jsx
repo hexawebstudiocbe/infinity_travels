@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import './Destinations.css';
 
 const destinations = [
   { id: 1, name: 'THAILAND', duration: '4 Nights / 5 Days', price: '₹24,999', img: 'https://images.unsplash.com/photo-1558486012-817176f84c6d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60' },
@@ -12,21 +13,16 @@ const destinations = [
 
 const Destinations = () => {
   return (
-    <section className="section-padding" style={{ backgroundColor: 'var(--bg-dark)' }}>
+    <section className="section-padding bg-dark">
       <div className="container">
-        <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-          <h2 className="section-title" style={{ color: '#e8ae2c' }}>
+        <div className="destinations-header">
+          <h2 className="section-title text-gold">
             TOP DESTINATIONS
           </h2>
-          <p className="section-subtitle" style={{ color: '#555' }}>Discover the world with our best selling tour packages</p>
+          <p className="section-subtitle dest-subtitle">Discover the world with our best selling tour packages</p>
         </div>
 
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', 
-          gap: '30px',
-          marginBottom: '50px'
-        }}>
+        <div className="destinations-grid">
           {destinations.map((dest, index) => (
             <motion.div 
               key={dest.id}
@@ -35,35 +31,19 @@ const Destinations = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              style={{
-                backgroundColor: 'var(--bg-card)',
-                borderRadius: '12px',
-                overflow: 'hidden',
-                boxShadow: '0 10px 30px rgba(0,0,0,0.3)',
-                transition: 'all 0.3s ease'
-              }}
+              className="destination-card"
             >
-              <div style={{ height: '200px', overflow: 'hidden' }}>
+              <div className="destination-img-container">
                 <img 
                   src={dest.img} 
                   alt={dest.name} 
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }}
-                  onMouseOver={e => e.currentTarget.style.transform = 'scale(1.1)'}
-                  onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'}
+                  className="destination-img"
                 />
               </div>
-              <div style={{ padding: '20px', textAlign: 'center' }}>
-                <h3 style={{ fontSize: '1.2rem', color: '#fff', marginBottom: '10px', letterSpacing: '1px' }}>{dest.name}</h3>
-                <p style={{ color: '#aaa', fontSize: '0.9rem', marginBottom: '15px' }}>{dest.duration}</p>
-                <div style={{ 
-                  backgroundColor: '#e8ae2c', 
-                  display: 'inline-block',
-                  padding: '5px 15px',
-                  borderRadius: '4px',
-                  color: '#000',
-                  fontWeight: '600',
-                  fontSize: '0.9rem'
-                }}>
+              <div className="destination-content">
+                <h3 className="destination-name">{dest.name}</h3>
+                <p className="destination-duration">{dest.duration}</p>
+                <div className="destination-explore-badge">
                   Explore
                 </div>
               </div>
@@ -71,8 +51,8 @@ const Destinations = () => {
           ))}
         </div>
 
-        <div style={{ textAlign: 'center' }}>
-          <button className="gold-btn" style={{ fontSize: '1rem', padding: '12px 30px' }}>
+        <div className="destinations-footer">
+          <button className="primary-btn btn-view-all">
             VIEW ALL PACKAGES <span>›</span>
           </button>
         </div>

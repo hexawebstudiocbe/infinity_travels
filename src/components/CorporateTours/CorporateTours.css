@@ -1,0 +1,95 @@
+.corporate-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.corporate-title {
+  color: var(--color-primary);
+}
+
+.corporate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.corporate-card {
+  background: var(--bg-card);
+  padding: 30px 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 30px var(--shadow-light);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.corporate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  border-color: var(--color-primary-light);
+}
+
+.corporate-icon {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary-light);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.corporate-card:hover .corporate-icon {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.corporate-card-title {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.corporate-card-desc {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.corporate-footer {
+  text-align: center;
+  padding: 30px;
+  background: var(--color-primary-light);
+  border-radius: 8px;
+  border-left: 4px solid var(--color-primary);
+}
+
+.corporate-footer h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--color-primary);
+  font-family: var(--font-serif);
+}
+
+.corporate-footer p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-sub);
+}
+
+@media (max-width: 768px) {
+  .corporate-grid {
+    grid-template-columns: 1fr;
+  }
+}
