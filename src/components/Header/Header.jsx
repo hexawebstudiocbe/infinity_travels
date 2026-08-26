@@ -9,6 +9,16 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
+  
+  const navLinks = [
+    { path: '/', label: 'HOME' },
+    { path: '/about', label: 'ABOUT US' },
+    { path: '/corporate-tours', label: 'CORPORATE TOURS' },
+    { path: '/packages', label: 'PACKAGES ▾' },
+    { path: '/services', label: 'SERVICES ▾' },
+    { path: '/gallery', label: 'GALLERY' },
+    { path: '/contact', label: 'CONTACT US' }
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,13 +51,16 @@ const Header = () => {
         {/* Navigation */}
         <nav className="nav-menu">
           <ul className="nav-list">
-            <li><Link to="/" className="nav-link active">HOME</Link></li>
-            <li><Link to="/" className="nav-link">ABOUT US</Link></li>
-            <li><Link to="/corporate-tours" className="nav-link">CORPORATE TOURS</Link></li>
-            <li><Link to="/" className="nav-link">PACKAGES ▾</Link></li>
-            <li><Link to="/" className="nav-link">SERVICES ▾</Link></li>
-            <li><Link to="/" className="nav-link">GALLERY</Link></li>
-            <li><Link to="/" className="nav-link">CONTACT US</Link></li>
+            {navLinks.map((link) => (
+              <li key={link.label}>
+                <Link 
+                  to={link.path} 
+                  className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
 
@@ -71,13 +84,17 @@ const Header = () => {
       {mobileMenuOpen && (
         <div className="mobile-menu-overlay">
           <ul className="mobile-nav-list">
-            <li><Link to="/" className="nav-link active" onClick={() => setMobileMenuOpen(false)}>HOME</Link></li>
-            <li><Link to="/" className="nav-link" onClick={() => setMobileMenuOpen(false)}>ABOUT US</Link></li>
-            <li><Link to="/corporate-tours" className="nav-link" onClick={() => setMobileMenuOpen(false)}>CORPORATE TOURS</Link></li>
-            <li><Link to="/" className="nav-link" onClick={() => setMobileMenuOpen(false)}>PACKAGES ▾</Link></li>
-            <li><Link to="/" className="nav-link" onClick={() => setMobileMenuOpen(false)}>SERVICES ▾</Link></li>
-            <li><Link to="/" className="nav-link" onClick={() => setMobileMenuOpen(false)}>GALLERY</Link></li>
-            <li><Link to="/" className="nav-link" onClick={() => setMobileMenuOpen(false)}>CONTACT US</Link></li>
+            {navLinks.map((link) => (
+              <li key={link.label}>
+                <Link 
+                  to={link.path} 
+                  className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
             <li className="mobile-explore-btn"><button className="primary-btn">EXPLORE</button></li>
           </ul>
         </div>

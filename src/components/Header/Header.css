@@ -48,12 +48,30 @@
   font-weight: 500;
   color: var(--text-main);
   transition: color 0.3s ease;
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--color-primary);
+  transition: width 0.3s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
   color: var(--color-primary);
   font-weight: 600;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
 }
 
 .mobile-toggle-btn {
