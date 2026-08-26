@@ -4,28 +4,28 @@ import { FaPlane, FaTrophy, FaHandshake, FaHotel, FaBullseye } from 'react-icons
 import './CorporateTours.css';
 
 const corporateFeatures = [
-  { 
-    icon: <FaPlane />, 
+  {
+    icon: <FaPlane />,
     title: "International Destinations",
     desc: "Thailand • Singapore • Bali • Vietnam • Malaysia"
   },
-  { 
-    icon: <FaTrophy />, 
+  {
+    icon: <FaTrophy />,
     title: "Incentive Travel",
     desc: "Reward high-performing teams with unforgettable experiences."
   },
-  { 
-    icon: <FaHandshake />, 
+  {
+    icon: <FaHandshake />,
     title: "Team Building",
     desc: "Engaging activities designed to build stronger teams."
   },
-  { 
-    icon: <FaHotel />, 
+  {
+    icon: <FaHotel />,
     title: "Premium Stay & Dining",
     desc: "Quality hotels, corporate dinners & curated experiences."
   },
-  { 
-    icon: <FaBullseye />, 
+  {
+    icon: <FaBullseye />,
     title: "100% Customized",
     desc: "Itineraries designed around your company's goals and budget."
   }
@@ -37,7 +37,7 @@ const CorporateTours = () => {
       <div className="container">
         <div className="corporate-header">
           <h2 className="section-title corporate-title">
-             CORPORATE TOURS
+            CORPORATE TOURS
           </h2>
           <p className="section-subtitle">
             Reward Your Team. Inspire Your People.
@@ -46,7 +46,7 @@ const CorporateTours = () => {
 
         <div className="corporate-grid">
           {corporateFeatures.map((item, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -54,11 +54,13 @@ const CorporateTours = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="corporate-card"
             >
-              <div className="corporate-icon">
-                {item.icon}
+              <div className="corporate-content">
+                <div className="corporate-icon">
+                  {item.icon}
+                </div>
+                <h3 className="corporate-card-title">{item.title}</h3>
+                <p className="corporate-card-desc">{item.desc}</p>
               </div>
-              <h3 className="corporate-card-title">{item.title}</h3>
-              <p className="corporate-card-desc">{item.desc}</p>
             </motion.div>
           ))}
         </div>
