@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebookF, FaInstagram, FaWhatsapp, FaYoutube, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaWhatsapp, FaYoutube, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaChevronRight } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
@@ -29,9 +29,11 @@ const Footer = () => {
           <div>
             <h3 className="footer-title">QUICK LINKS</h3>
             <ul className="footer-links">
-              {['Home', 'About Us', 'Tour Packages', 'Services', 'Gallery', 'Blog', 'Contact Us'].map((link, idx) => (
+              {['Home', 'About Us','Corporate Tours', 'Packages', 'Services', 'Gallery', 'Contact Us'].map((link, idx) => (
                 <li key={idx}>
-                  <a href="#" className="footer-link">{link}</a>
+                  <a href="#" className="footer-link">
+                    <FaChevronRight className="footer-link-arrow" /> {link}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -41,9 +43,11 @@ const Footer = () => {
           <div>
             <h3 className="footer-title">OUR SERVICES</h3>
             <ul className="footer-links">
-              {['Flight Booking', 'Hotel Booking', 'Visa Assistance', 'Travel Insurance', 'Airport Transfers', 'Group & Corporate Tours', 'Honeymoon Packages'].map((link, idx) => (
+              {['Flight Booking', 'Hotel Booking', 'Visa Assistance', 'Travel Insurance', 'Airport Transfers', 'Group & Corporate Tours'].map((link, idx) => (
                 <li key={idx}>
-                  <a href="#" className="footer-link">{link}</a>
+                  <a href="#" className="footer-link">
+                    <FaChevronRight className="footer-link-arrow" /> {link}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -54,7 +58,9 @@ const Footer = () => {
             <h3 className="footer-title">CONTACT US</h3>
             <ul className="footer-contact">
               <li className="footer-contact-item">
-                <FaPhoneAlt className="footer-contact-icon" />
+                <div className="footer-contact-icon-wrapper">
+                  <FaPhoneAlt className="footer-contact-icon" />
+                </div>
                 <div>
                   <div>7418271859</div>
                   <div>9047471859</div>
@@ -63,11 +69,15 @@ const Footer = () => {
                 </div>
               </li>
               <li className="footer-contact-item align-center">
-                <FaEnvelope className="footer-contact-icon" />
+                <div className="footer-contact-icon-wrapper">
+                  <FaEnvelope className="footer-contact-icon" />
+                </div>
                 <a href="mailto:info@infinityvacations.net">info@infinityvacations.net</a>
               </li>
               <li className="footer-contact-item align-center">
-                <FaMapMarkerAlt className="footer-contact-icon" />
+                <div className="footer-contact-icon-wrapper">
+                  <FaMapMarkerAlt className="footer-contact-icon" />
+                </div>
                 <div>Coimbatore, Tamil Nadu, India</div>
               </li>
             </ul>
@@ -80,7 +90,10 @@ const Footer = () => {
           <div>© 2026 Infinity Vacations. All Rights Reserved.</div>
           <div className="footer-bottom-links">
             <a href="#">Privacy Policy</a>
+            <span className="footer-bottom-separator">|</span>
             <a href="#">Terms & Conditions</a>
+            <span className="footer-bottom-separator">|</span>
+            <a href="#">Refund Policy</a>
           </div>
         </div>
       </div>
