@@ -1,38 +1,44 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaPlane, FaTrophy, FaHandshake, FaHotel, FaBullseye, FaArrowRight } from 'react-icons/fa';
+import { FaTrophy, FaSuitcase, FaUsers, FaBuilding, FaHandshake, FaPlane } from 'react-icons/fa';
 import './CorporateTours.css';
 
 const corporateFeatures = [
   {
-    image: '/International Destinations.avif',
-    icon: <FaPlane />,
-    title: "International Destinations",
-    desc: "Thailand • Singapore • Bali • Vietnam • Malaysia",
-  },
-  {
     image: '/Incentive Travel.avif',
     icon: <FaTrophy />,
-    title: "Incentive Travel",
-    desc: "Reward high-performing teams with unforgettable experiences.",
-  },
-  {
-    image: '/Team Building.avif',
-    icon: <FaHandshake />,
-    title: "Team Building",
-    desc: "Engaging activities designed to build stronger teams.",
+    title: "Corporate Incentive Tours",
+    desc: "Reward your top performers with unforgettable domestic or international experiences designed to motivate, appreciate and retain your best talent.",
   },
   {
     image: '/Premium Stay & Dining.avif',
-    icon: <FaHotel />,
-    title: "Premium Stay & Dining",
-    desc: "Quality hotels, corporate dinners & curated experiences.",
+    icon: <FaSuitcase />,
+    title: "Annual Company Trips",
+    desc: "Give your employees a well-deserved break with professionally organized company outings, customized to your team size and budget.",
+  },
+  {
+    image: '/Team Building.avif',
+    icon: <FaUsers />,
+    title: "Team-Building Tours",
+    desc: "Strengthen teamwork, communication and relationships through carefully planned activities, experiences and destinations.",
   },
   {
     image: '/Customized.avif',
-    icon: <FaBullseye />,
-    title: "100% Customized",
-    desc: "Itineraries designed around your company's goals and budget.",
+    icon: <FaBuilding />,
+    title: "Corporate Conferences & Events",
+    desc: "Complete travel support for conferences, seminars, meetings and corporate events — including transportation, accommodation and event coordination.",
+  },
+  {
+    image: '/Partner Meets.avif',
+    icon: <FaHandshake />,
+    title: "Dealer & Partner Meets",
+    desc: "Create memorable experiences for your dealers, distributors and business partners with premium travel programs and hospitality.",
+  },
+  {
+    image: '/International Destinations.avif',
+    icon: <FaPlane />,
+    title: "International Corporate Tours",
+    desc: "Take your team beyond borders with customized corporate journeys to destinations such as Thailand, Dubai, Singapore, Malaysia, Vietnam, Bali and more.",
   }
 ];
 
@@ -46,11 +52,16 @@ const CorporateTours = () => {
             <h2 className="corporate-title">CORPORATE TOURS</h2>
             <span className="corporate-line right"></span>
           </div>
-          <p className="corporate-subtitle">
-            Reward Your Team. Inspire Your People.
-          </p>
         </div>
+      </div>
 
+      <div className="corporate-banner-container">
+        <div className="corporate-banner-text">
+          Reward Your Team. Inspire Your People. Explore the World.
+        </div>
+      </div>
+
+      <div className="container">
         <div className="corporate-grid">
           {corporateFeatures.map((item, index) => (
             <motion.div

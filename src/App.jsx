@@ -1,10 +1,11 @@
-import React from 'react';
+ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import ScrollToTop from './components/ScrollToTop';
 import Header from './components/Header/Header';
 import Home from './pages/Home';
 import CorporateToursPage from './pages/CorporateToursPage';
+import AboutUsPage from './pages/AboutUsPage';
 import Footer from './components/Footer/Footer';
 import './index.css';
 
@@ -25,6 +26,7 @@ function App() {
           <main>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/about" element={<AboutUsPage />} />
               <Route path="/corporate-tours" element={<CorporateToursPage />} />
             </Routes>
           </main>
