@@ -60,12 +60,21 @@ const Header = () => {
           <ul className="nav-list">
             {navLinks.map((link) => (
               <li key={link.label} className={link.dropdown ? 'has-dropdown' : ''}>
-                <Link 
-                  to={link.path} 
-                  className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
-                >
-                  {link.label}
-                </Link>
+                {link.dropdown ? (
+                  <span 
+                    className={`nav-link ${location.pathname.startsWith(link.path) ? 'active' : ''}`}
+                    style={{cursor: 'pointer'}}
+                  >
+                    {link.label}
+                  </span>
+                ) : (
+                  <Link 
+                    to={link.path} 
+                    className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
+                  >
+                    {link.label}
+                  </Link>
+                )}
                 {link.dropdown && (
                   <ul className="dropdown-menu">
                     {link.dropdown.map(dropItem => (
@@ -104,15 +113,24 @@ const Header = () => {
           <ul className="mobile-nav-list">
             {navLinks.map((link) => (
               <li key={link.label} className={link.dropdown ? 'mobile-has-dropdown' : ''}>
-                <Link 
-                  to={link.path} 
-                  className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
-                  onClick={() => {
-                    if (!link.dropdown) setMobileMenuOpen(false);
-                  }}
-                >
-                  {link.label}
-                </Link>
+                {link.dropdown ? (
+                  <span 
+                    className={`nav-link ${location.pathname.startsWith(link.path) ? 'active' : ''}`}
+                    style={{cursor: 'pointer'}}
+                  >
+                    {link.label}
+                  </span>
+                ) : (
+                  <Link 
+                    to={link.path} 
+                    className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                    }}
+                  >
+                    {link.label}
+                  </Link>
+                )}
                 {link.dropdown && (
                   <ul className="mobile-dropdown-menu">
                     {link.dropdown.map(dropItem => (
