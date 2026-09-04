@@ -6,6 +6,9 @@ import Header from './components/Header/Header';
 import Home from './pages/Home';
 import CorporateToursPage from './pages/CorporateToursPage';
 import AboutUsPage from './pages/AboutUsPage';
+import ServicesPage from './pages/ServicesPage';
+import DomesticPackagesPage from './pages/DomesticPackagesPage';
+import InternationalPackagesPage from './pages/InternationalPackagesPage';
 import Footer from './components/Footer/Footer';
 import './index.css';
 
@@ -28,6 +31,9 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<AboutUsPage />} />
               <Route path="/corporate-tours" element={<CorporateToursPage />} />
+              <Route path="/packages/domestic" element={<DomesticPackagesPage />} />
+              <Route path="/packages/international" element={<InternationalPackagesPage />} />
+              <Route path="/services" element={<ServicesPage />} />
             </Routes>
           </main>
           

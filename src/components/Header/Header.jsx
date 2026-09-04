@@ -14,8 +14,15 @@ const Header = () => {
     { path: '/', label: 'HOME' },
     { path: '/about', label: 'ABOUT US' },
     { path: '/corporate-tours', label: 'CORPORATE TOURS' },
-    { path: '/packages', label: 'PACKAGES ▾' },
-    { path: '/services', label: 'SERVICES ▾' },
+    { 
+      path: '/packages', 
+      label: 'PACKAGES ▾',
+      dropdown: [
+        { path: '/packages/domestic', label: 'Domestic' },
+        { path: '/packages/international', label: 'International' }
+      ]
+    },
+    { path: '/services', label: 'SERVICES' },
     { path: '/gallery', label: 'GALLERY' },
     { path: '/contact', label: 'CONTACT US' }
   ];
@@ -52,13 +59,24 @@ const Header = () => {
         <nav className="nav-menu">
           <ul className="nav-list">
             {navLinks.map((link) => (
-              <li key={link.label}>
+              <li key={link.label} className={link.dropdown ? 'has-dropdown' : ''}>
                 <Link 
                   to={link.path} 
                   className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
                 >
                   {link.label}
                 </Link>
+                {link.dropdown && (
+                  <ul className="dropdown-menu">
+                    {link.dropdown.map(dropItem => (
+                      <li key={dropItem.label}>
+                        <Link to={dropItem.path} className="dropdown-link">
+                          {dropItem.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
           </ul>
@@ -85,14 +103,31 @@ const Header = () => {
         <div className="mobile-menu-overlay">
           <ul className="mobile-nav-list">
             {navLinks.map((link) => (
-              <li key={link.label}>
+              <li key={link.label} className={link.dropdown ? 'mobile-has-dropdown' : ''}>
                 <Link 
                   to={link.path} 
                   className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() => {
+                    if (!link.dropdown) setMobileMenuOpen(false);
+                  }}
                 >
                   {link.label}
                 </Link>
+                {link.dropdown && (
+                  <ul className="mobile-dropdown-menu">
+                    {link.dropdown.map(dropItem => (
+                      <li key={dropItem.label}>
+                        <Link 
+                          to={dropItem.path} 
+                          className="mobile-dropdown-link"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {dropItem.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
             <li className="mobile-explore-btn"><button className="primary-btn">EXPLORE</button></li>
