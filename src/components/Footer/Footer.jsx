@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaFacebookF, FaInstagram, FaWhatsapp, FaYoutube, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaChevronRight } from 'react-icons/fa';
 import './Footer.css';
 
@@ -29,11 +30,43 @@ const Footer = () => {
           <div>
             <h3 className="footer-title">QUICK LINKS</h3>
             <ul className="footer-links">
-              {['Home', 'About Us','Corporate Tours', 'Packages', 'Services', 'Gallery', 'Contact Us'].map((link, idx) => (
-                <li key={idx}>
-                  <a href="#" className="footer-link">
-                    <FaChevronRight className="footer-link-arrow" /> {link}
-                  </a>
+              {[
+                { label: 'Home', path: '/' },
+                { label: 'About Us', path: '/about' },
+                { label: 'Corporate Tours', path: '/corporate-tours' },
+                { 
+                  label: 'Packages ▾', 
+                  path: '#',
+                  dropdown: [
+                    { label: 'Domestic', path: '/packages/domestic' },
+                    { label: 'International', path: '/packages/international' }
+                  ]
+                },
+                { label: 'Services', path: '/services' },
+                { label: 'Gallery', path: '/gallery' },
+                { label: 'Contact Us', path: '/contact' }
+              ].map((link, idx) => (
+                <li key={idx} className={link.dropdown ? 'footer-has-dropdown' : ''}>
+                  {link.dropdown ? (
+                    <div className="footer-dropdown-wrapper">
+                      <span className="footer-link" style={{cursor: 'pointer'}}>
+                        <FaChevronRight className="footer-link-arrow" /> {link.label}
+                      </span>
+                      <ul className="footer-dropdown-menu">
+                        {link.dropdown.map((dropItem, dropIdx) => (
+                          <li key={dropIdx}>
+                            <Link to={dropItem.path} className="footer-dropdown-link">
+                              {dropItem.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : (
+                    <Link to={link.path} className="footer-link">
+                      <FaChevronRight className="footer-link-arrow" /> {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -45,9 +78,9 @@ const Footer = () => {
             <ul className="footer-links">
               {['Flight Booking', 'Hotel Booking', 'Visa Assistance', 'Travel Insurance', 'Airport Transfers', 'Group & Corporate Tours'].map((link, idx) => (
                 <li key={idx}>
-                  <a href="#" className="footer-link">
+                  <Link to="/services" className="footer-link">
                     <FaChevronRight className="footer-link-arrow" /> {link}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -62,10 +95,8 @@ const Footer = () => {
                   <FaPhoneAlt className="footer-contact-icon" />
                 </div>
                 <div>
-                  <div>7418271859</div>
-                  <div>9047471859</div>
-                  <div>9500971859</div>
-                  <div>9500241674</div>
+                  <div>9150041859</div>
+                  <div>9150051859</div>
                 </div>
               </li>
               <li className="footer-contact-item align-center">

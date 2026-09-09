@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import { FaFacebookF, FaInstagram, FaWhatsapp, FaTwitter } from 'react-icons/fa';
 import './Header.css';
@@ -7,6 +7,7 @@ import './Header.css';
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
   
@@ -107,16 +108,39 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
-      {mobileMenuOpen && (
-        <div className="mobile-menu-overlay">
-          <ul className="mobile-nav-list">
+      {/* Mobile Menu Overlay / Side Drawer */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <>
+            <motion.div 
+              className="mobile-menu-backdrop"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setMobileMenuOpen(false)}
+            />
+            <motion.div 
+              className="mobile-menu-sidebar"
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            >
+              <button 
+                className="mobile-close-btn" 
+                onClick={() => setMobileMenuOpen(false)}
+                aria-label="Close menu"
+              >
+                ✕
+              </button>
+            <ul className="mobile-nav-list">
             {navLinks.map((link) => (
               <li key={link.label} className={link.dropdown ? 'mobile-has-dropdown' : ''}>
                 {link.dropdown ? (
                   <span 
                     className={`nav-link ${location.pathname.startsWith(link.path) ? 'active' : ''}`}
                     style={{cursor: 'pointer'}}
+                    onClick={() => setActiveDropdown(activeDropdown === link.label ? null : link.label)}
                   >
                     {link.label}
                   </span>
@@ -131,7 +155,7 @@ const Header = () => {
                     {link.label}
                   </Link>
                 )}
-                {link.dropdown && (
+                {link.dropdown && activeDropdown === link.label && (
                   <ul className="mobile-dropdown-menu">
                     {link.dropdown.map(dropItem => (
                       <li key={dropItem.label}>
@@ -150,8 +174,10 @@ const Header = () => {
             ))}
             <li className="mobile-explore-btn"><button className="primary-btn">EXPLORE</button></li>
           </ul>
-        </div>
-      )}
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 };

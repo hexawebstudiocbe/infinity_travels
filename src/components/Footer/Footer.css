@@ -188,3 +188,39 @@
 .footer-bottom-links a:hover {
   color: var(--color-primary);
 }
+
+.footer-has-dropdown {
+  position: relative;
+}
+
+.footer-dropdown-wrapper {
+  position: relative;
+}
+
+.footer-dropdown-menu {
+  display: none;
+  list-style: none;
+  padding: 10px 15px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+.footer-has-dropdown:hover .footer-dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-dropdown-link {
+  font-size: 0.9rem;
+  color: #a0aec0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: block;
+}
+
+.footer-dropdown-link:hover {
+  color: var(--color-primary);
+}
