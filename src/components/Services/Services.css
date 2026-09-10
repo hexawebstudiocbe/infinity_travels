@@ -1,6 +1,6 @@
 /* Services Top Grid */
 .services-overview-section {
-  background-color: #fff;
+  background-color: var(--bg-dark);
   padding-bottom: 60px;
 }
 

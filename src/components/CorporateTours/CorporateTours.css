@@ -1,6 +1,6 @@
 .corporate-section {
   position: relative;
-  background-color: #fafafa;
+  background-color: var(--bg-dark);
   overflow: hidden;
 }
 

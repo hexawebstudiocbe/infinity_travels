@@ -1,6 +1,6 @@
 .domestic-packages {
-  padding: 80px 0;
-  background-color: var(--bg-main, #f9f9f9);
+  padding: 60px 0;
+  background-color: var(--bg-dark);
 }
 
 .packages-grid {

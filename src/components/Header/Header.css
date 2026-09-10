@@ -12,7 +12,7 @@
 }
 
 .header.scrolled {
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(11, 37, 69, 0.95);
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 20px var(--shadow-color);
   padding: 15px 0;
@@ -101,8 +101,8 @@
   width: 75vw;
   max-width: 350px;
   height: 100vh;
-  background-color: #ffffff;
-  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+  background-color: #0B2545;
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   padding-top: 100px;
@@ -147,7 +147,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #ffffff;
+  background-color: #0B2545;
   min-width: 200px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
