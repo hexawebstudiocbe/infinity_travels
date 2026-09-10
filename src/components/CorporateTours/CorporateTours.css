@@ -123,7 +123,7 @@
 .corporate-card {
   width: calc(33.333% - 20px);
   max-width: 350px;
-  background: #ffffff;
+  background: var(--bg-card);
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -178,7 +178,7 @@
 .corporate-icon {
   width: 50px;
   height: 50px;
-  background-color: #ffffff;
+  background-color: var(--bg-darker);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -211,7 +211,7 @@
 }
 
 .corporate-card:hover .corporate-card-desc {
-  color: #ffffff;
+  color: #000000;
 }
 
 .corporate-card-link {

@@ -70,7 +70,7 @@ const Services = () => {
         <div className="container">
           <div className="services-header text-center">
             <h2 className="section-title">Comprehensive Travel Solutions</h2>
-            <p className="section-subtitle" style={{ maxWidth: '600px', margin: '0 auto 50px', color: '#666' }}>
+            <p className="section-subtitle" style={{ maxWidth: '600px', margin: '0 auto 50px', color: 'var(--text-muted)' }}>
               End-to-end travel services designed to make your journey seamless from planning to return.
             </p>
           </div>
@@ -97,7 +97,7 @@ const Services = () => {
       </section>
 
       {/* Bottom Section: Zig-Zag Detailed View */}
-      <section className="services-detailed-section section-padding" style={{ backgroundColor: '#f9f9f9', padding: '80px 0' }}>
+      <section className="services-detailed-section section-padding" style={{ backgroundColor: 'var(--bg-dark)', padding: '80px 0' }}>
         <div className="container">
           <div className="detailed-services-container">
             {servicesData.map((service, index) => {
