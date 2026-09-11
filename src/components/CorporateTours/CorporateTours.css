@@ -86,7 +86,7 @@
   width: 100%;
   position: relative;
   height: 60px;
-  background-color: #ff8c00;
+  background-color: #d4af37;
   margin-bottom: 50px;
 }
 
@@ -106,6 +106,7 @@
     left: 100%;
     transform: translateY(-50%) translateX(0);
   }
+
   to {
     left: 0;
     transform: translateY(-50%) translateX(-100%);

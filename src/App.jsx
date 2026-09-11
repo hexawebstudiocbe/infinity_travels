@@ -1,4 +1,4 @@
- import React from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import ScrollToTop from './components/ScrollToTop';
@@ -9,6 +9,7 @@ import AboutUsPage from './pages/AboutUsPage';
 import ServicesPage from './pages/ServicesPage';
 import DomesticPackagesPage from './pages/DomesticPackagesPage';
 import InternationalPackagesPage from './pages/InternationalPackagesPage';
+import ContactUsPage from './pages/ContactUsPage';
 import Footer from './components/Footer/Footer';
 import './index.css';
 
@@ -25,7 +26,7 @@ function App() {
           </Helmet>
 
           <Header />
-          
+
           <main>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -34,9 +35,10 @@ function App() {
               <Route path="/packages/domestic" element={<DomesticPackagesPage />} />
               <Route path="/packages/international" element={<InternationalPackagesPage />} />
               <Route path="/services" element={<ServicesPage />} />
+              <Route path="/contact" element={<ContactUsPage />} />
             </Routes>
           </main>
-          
+
           <Footer />
         </div>
       </Router>
