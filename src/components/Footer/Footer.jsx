@@ -116,15 +116,10 @@ const Footer = () => {
 
         </div>
 
-        {/* Bottom Footer */}
         <div className="footer-bottom">
           <div>© 2026 Infinity Vacations. All Rights Reserved.</div>
           <div className="footer-bottom-links">
-            <a href="#">Privacy Policy</a>
-            <span className="footer-bottom-separator">|</span>
-            <a href="#">Terms & Conditions</a>
-            <span className="footer-bottom-separator">|</span>
-            <a href="#">Refund Policy</a>
+            <Link to="/terms-and-conditions">Terms & Conditions</Link>
           </div>
         </div>
       </div>

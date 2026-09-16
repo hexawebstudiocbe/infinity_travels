@@ -38,6 +38,7 @@ const Destinations = () => {
                   src={dest.img} 
                   alt={dest.name} 
                   className="destination-img"
+                  loading="lazy"
                 />
               </div>
               <div className="destination-content">

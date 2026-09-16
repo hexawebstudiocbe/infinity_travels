@@ -10,7 +10,10 @@ import ServicesPage from './pages/ServicesPage';
 import DomesticPackagesPage from './pages/DomesticPackagesPage';
 import InternationalPackagesPage from './pages/InternationalPackagesPage';
 import ContactUsPage from './pages/ContactUsPage';
+import NotFoundPage from './pages/NotFoundPage';
+import TermsAndConditionsPage from './pages/TermsAndConditionsPage';
 import Footer from './components/Footer/Footer';
+import WhatsAppCTA from './components/CTA/WhatsAppCTA';
 import './index.css';
 
 function App() {
@@ -36,9 +39,12 @@ function App() {
               <Route path="/packages/international" element={<InternationalPackagesPage />} />
               <Route path="/services" element={<ServicesPage />} />
               <Route path="/contact" element={<ContactUsPage />} />
+              <Route path="/terms-and-conditions" element={<TermsAndConditionsPage />} />
+              <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </main>
 
+          <WhatsAppCTA />
           <Footer />
         </div>
       </Router>

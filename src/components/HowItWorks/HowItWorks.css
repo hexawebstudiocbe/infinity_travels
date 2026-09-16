@@ -106,7 +106,7 @@
     flex-wrap: wrap;
     gap: 40px 0;
   }
-  
+
   .step-item {
     flex: 0 0 50%;
   }
@@ -121,14 +121,14 @@
     flex-direction: column;
     gap: 50px 0;
   }
-  
+
   .step-item {
     flex: 0 0 100%;
   }
-  
+
   .step-connector {
-    top: auto;
-    bottom: -25px;
+    top: 100%;
+    bottom: auto;
     right: auto;
     left: 50%;
     width: 2px;
@@ -142,11 +142,11 @@
     width: 2px;
     height: 100%;
   }
-  
+
   .step-item:nth-child(even) .step-connector {
     display: block;
   }
-  
+
   .step-item:last-child .step-connector {
     display: none;
   }

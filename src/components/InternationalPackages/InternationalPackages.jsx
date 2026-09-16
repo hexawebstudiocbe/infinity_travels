@@ -47,7 +47,7 @@ const InternationalPackages = () => {
               transition={{ duration: 0.5, delay: (index % 4) * 0.1 }}
             >
               <div className="package-image">
-                <img src={dest.image} alt={dest.name} />
+                <img src={dest.image} alt={dest.name} loading="lazy" />
                 <div className="package-overlay">
                   <div className="package-info">
                     <h3>{dest.name}</h3>

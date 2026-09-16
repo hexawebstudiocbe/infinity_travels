@@ -1,9 +1,65 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaPaperPlane, FaSpinner, FaExclamationCircle } from 'react-icons/fa';
 import './ContactUs.css';
 
 const ContactUs = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+    bot_field: '' // Honeypot field
+  });
+  
+  const [status, setStatus] = useState({
+    submitting: false,
+    error: null,
+    success: false
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    // Spam protection check (honeypot)
+    if (formData.bot_field) {
+      return; // Silent reject for bots
+    }
+
+    // Basic frontend validation
+    if (!formData.name || !formData.email || !formData.message) {
+      setStatus({ ...status, error: "Please fill in all required fields." });
+      return;
+    }
+
+    setStatus({ submitting: true, error: null, success: false });
+
+    // TODO: Connect to real submission endpoint here.
+    // For now, we simulate an error because there is no endpoint configured.
+    setTimeout(() => {
+      setStatus({
+        submitting: false,
+        error: "Submission endpoint not configured. Please contact us via phone or email.",
+        success: false
+      });
+      
+      // Track failed form submission
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'form_error', {
+          'event_category': 'Contact',
+          'event_label': 'Endpoint Missing'
+        });
+      }
+    }, 1500);
+  };
+
   return (
     <div className="contact-container">
       <div className="contact-hero">
@@ -40,8 +96,8 @@ const ContactUs = () => {
               </div>
               <div className="info-text">
                 <h4>Phone</h4>
-                <p>+91 9150041859</p>
-                <p>+91 9150051859</p>
+                <p><a href="tel:+919150041859" onClick={() => typeof window.gtag === 'function' && window.gtag('event', 'click', { event_category: 'Contact', event_label: 'Phone Link 1' })} style={{color: 'inherit', textDecoration: 'none'}}>+91 9150041859</a></p>
+                <p><a href="tel:+919150051859" onClick={() => typeof window.gtag === 'function' && window.gtag('event', 'click', { event_category: 'Contact', event_label: 'Phone Link 2' })} style={{color: 'inherit', textDecoration: 'none'}}>+91 9150051859</a></p>
               </div>
             </div>
             
@@ -51,7 +107,7 @@ const ContactUs = () => {
               </div>
               <div className="info-text">
                 <h4>Email</h4>
-                <p>info@infinityvacations.net</p>
+                <p><a href="mailto:info@infinityvacations.net" style={{color: 'inherit', textDecoration: 'none'}}>info@infinityvacations.net</a></p>
               </div>
             </div>
             
@@ -73,30 +129,43 @@ const ContactUs = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+          <form className="contact-form" onSubmit={handleSubmit}>
+            {/* Honeypot field - hidden from real users */}
+            <div style={{ display: 'none' }} aria-hidden="true">
+              <label htmlFor="bot_field">Don't fill this out if you're human:</label>
+              <input type="text" id="bot_field" value={formData.bot_field} onChange={handleChange} />
+            </div>
+
             <div className="form-group">
-              <label htmlFor="name">Full Name</label>
-              <input type="text" id="name" placeholder="John Doe" required />
+              <label htmlFor="name">Full Name *</label>
+              <input type="text" id="name" placeholder="John Doe" value={formData.name} onChange={handleChange} required />
             </div>
             
             <div className="form-group">
-              <label htmlFor="email">Email Address</label>
-              <input type="email" id="email" placeholder="john@example.com" required />
+              <label htmlFor="email">Email Address *</label>
+              <input type="email" id="email" placeholder="john@example.com" value={formData.email} onChange={handleChange} required />
             </div>
             
             <div className="form-group">
               <label htmlFor="phone">Phone Number</label>
-              <input type="tel" id="phone" placeholder="+91 00000 00000" />
+              <input type="tel" id="phone" placeholder="+91 00000 00000" value={formData.phone} onChange={handleChange} />
             </div>
             
             <div className="form-group">
-              <label htmlFor="message">Your Message</label>
-              <textarea id="message" rows="5" placeholder="How can we help you plan your trip?" required></textarea>
+              <label htmlFor="message">Your Message *</label>
+              <textarea id="message" rows="5" placeholder="How can we help you plan your trip?" value={formData.message} onChange={handleChange} required></textarea>
             </div>
             
-            <button type="submit" className="submit-btn">
-              <span>Send Message</span>
-              <FaPaperPlane className="submit-icon" />
+            {status.error && (
+              <div style={{ color: '#d32f2f', backgroundColor: '#ffebee', padding: '10px', borderRadius: '4px', marginBottom: '15px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <FaExclamationCircle />
+                <span>{status.error}</span>
+              </div>
+            )}
+
+            <button type="submit" className="submit-btn" disabled={status.submitting}>
+              <span>{status.submitting ? 'Sending...' : 'Send Message'}</span>
+              {status.submitting ? <FaSpinner className="submit-icon spinner" /> : <FaPaperPlane className="submit-icon" />}
             </button>
           </form>
         </motion.div>

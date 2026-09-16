@@ -8,6 +8,10 @@ const InternationalPackagesPage = () => {
       <Helmet>
         <title>International Packages | Infinity Vacations</title>
         <meta name="description" content="Explore amazing international destinations with Infinity Vacations." />
+        <link rel="canonical" href="https://www.infinityvacations.net/packages/international" />
+        <meta property="og:title" content="International Packages | Infinity Vacations" />
+        <meta property="og:description" content="Explore amazing international destinations with Infinity Vacations." />
+        <meta property="og:url" content="https://www.infinityvacations.net/packages/international" />
       </Helmet>
       
       {/* Optional: Add a small hero section for the page if you want */}

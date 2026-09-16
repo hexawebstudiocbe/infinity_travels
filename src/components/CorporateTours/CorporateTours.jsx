@@ -73,7 +73,7 @@ const CorporateTours = () => {
               className="corporate-card"
             >
               <div className="corporate-card-image">
-                <img src={item.image} alt={item.title} />
+                <img src={item.image} alt={item.title} loading="lazy" />
               </div>
               <div className="corporate-card-content">
                 <div className="corporate-icon-wrapper">

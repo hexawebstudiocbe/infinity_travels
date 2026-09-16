@@ -111,7 +111,7 @@ const Services = () => {
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.6 }}
                   >
-                    <img src={service.image} alt={service.title} />
+                    <img src={service.image} alt={service.title} loading="lazy" />
                   </motion.div>
                   <motion.div 
                     className="service-detail-content"

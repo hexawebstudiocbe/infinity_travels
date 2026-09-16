@@ -8,6 +8,10 @@ const DomesticPackagesPage = () => {
       <Helmet>
         <title>Domestic Packages | Infinity Vacations</title>
         <meta name="description" content="Explore beautiful domestic destinations in India with Infinity Vacations." />
+        <link rel="canonical" href="https://www.infinityvacations.net/packages/domestic" />
+        <meta property="og:title" content="Domestic Packages | Infinity Vacations" />
+        <meta property="og:description" content="Explore beautiful domestic destinations in India with Infinity Vacations." />
+        <meta property="og:url" content="https://www.infinityvacations.net/packages/domestic" />
       </Helmet>
       
       {/* Optional: Add a small hero section for the page if you want */}
