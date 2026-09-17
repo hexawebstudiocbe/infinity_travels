@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { FaPlaneDeparture } from 'react-icons/fa';
 import './CTA.css';
 
@@ -33,9 +34,9 @@ const CTA = () => {
           </div>
           
           <div>
-            <button className="cta-btn">
+            <Link to="/packages/international" className="cta-btn" style={{display: 'inline-block', textDecoration: 'none'}}>
               EXPLORE <span>›</span>
-            </button>
+            </Link>
           </div>
         </motion.div>
       </div>

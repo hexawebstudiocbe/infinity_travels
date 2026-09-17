@@ -12,6 +12,8 @@ import InternationalPackagesPage from './pages/InternationalPackagesPage';
 import ContactUsPage from './pages/ContactUsPage';
 import NotFoundPage from './pages/NotFoundPage';
 import TermsAndConditionsPage from './pages/TermsAndConditionsPage';
+import CancellationPolicyPage from './pages/CancellationPolicyPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import Footer from './components/Footer/Footer';
 import WhatsAppCTA from './components/CTA/WhatsAppCTA';
 import './index.css';
@@ -40,6 +42,8 @@ function App() {
               <Route path="/services" element={<ServicesPage />} />
               <Route path="/contact" element={<ContactUsPage />} />
               <Route path="/terms-and-conditions" element={<TermsAndConditionsPage />} />
+              <Route path="/cancellation-policy" element={<CancellationPolicyPage />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </main>

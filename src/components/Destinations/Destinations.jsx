@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import './Destinations.css';
 
 const destinations = [
@@ -43,18 +44,18 @@ const Destinations = () => {
               </div>
               <div className="destination-content">
                 <h3 className="destination-name">{dest.name}</h3>
-                <div className="destination-explore-badge">
+                <Link to="/packages/international" className="destination-explore-badge" style={{textDecoration: 'none'}}>
                   Explore
-                </div>
+                </Link>
               </div>
             </motion.div>
           ))}
         </div>
 
         <div className="destinations-footer">
-          <button className="primary-btn btn-view-all">
+          <Link to="/packages/international" className="primary-btn btn-view-all" style={{display: 'inline-block', textDecoration: 'none'}}>
             VIEW ALL PACKAGES <span>›</span>
-          </button>
+          </Link>
         </div>
       </div>
     </section>

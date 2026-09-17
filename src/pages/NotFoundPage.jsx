@@ -18,7 +18,7 @@ const NotFoundPage = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <img src="/orange%20logo.png" alt="Infinity Vacations Logo" className="not-found-logo" />
+        <img src="/logo1.png" alt="Infinity Vacations Logo" className="not-found-logo" />
       </motion.div>
 
       <motion.h1 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { FaTag, FaSuitcase, FaHeadset, FaShieldAlt } from 'react-icons/fa';
 import './Hero.css';
 
@@ -50,9 +51,9 @@ const Hero = () => {
           <p className="hero-desc">
             Unforgettable Journeys.<br/>Endless Memories.
           </p>
-          <button className="primary-btn hero-btn">
+          <Link to="/packages/international" className="primary-btn hero-btn" style={{display: 'inline-block', textDecoration: 'none'}}>
             EXPLORE PACKAGES <span>»</span>
-          </button>
+          </Link>
         </motion.div>
 
         {/* Right Badges */}

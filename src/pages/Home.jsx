@@ -14,7 +14,7 @@ const Home = () => {
     "@type": "TravelAgency",
     "name": "Infinity Vacations",
     "url": "https://www.infinityvacations.net",
-    "logo": "https://www.infinityvacations.net/orange%20logo.png",
+    "logo": "https://www.infinityvacations.net/logo1.png",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+91-9150041859",

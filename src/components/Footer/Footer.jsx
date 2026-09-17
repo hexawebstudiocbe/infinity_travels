@@ -12,7 +12,7 @@ const Footer = () => {
           {/* Logo & About */}
           <div>
             <div className="footer-logo">
-              <img src="/orange%20logo.png" alt="Infinity Vacations Logo" />
+              <img src="/logo1.png" alt="Infinity Vacations Logo" />
             </div>
             <p className="footer-about-text">
               We make your travel dreams come true with trusted service, best prices and unforgettable experiences.
@@ -120,6 +120,10 @@ const Footer = () => {
           <div>© 2026 Infinity Vacations. All Rights Reserved.</div>
           <div className="footer-bottom-links">
             <Link to="/terms-and-conditions">Terms & Conditions</Link>
+            <span className="footer-bottom-separator">|</span>
+            <Link to="/cancellation-policy">Cancellation & Refund Policy</Link>
+            <span className="footer-bottom-separator">|</span>
+            <Link to="/privacy-policy">Privacy Policy</Link>
           </div>
         </div>
       </div>

@@ -52,7 +52,7 @@ const InternationalPackages = () => {
                   <div className="package-info">
                     <h3>{dest.name}</h3>
                     <p>{dest.description}</p>
-                    <button className="secondary-btn mt-3">View Packages</button>
+                    {/* <button className="secondary-btn mt-3">View Packages</button> */}
                   </div>
                 </div>
               </div>

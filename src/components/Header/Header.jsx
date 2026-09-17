@@ -24,7 +24,7 @@ const Header = () => {
       ]
     },
     { path: '/services', label: 'SERVICES' },
-    { path: '/gallery', label: 'GALLERY' },
+    // { path: '/gallery', label: 'GALLERY' },
     { path: '/contact', label: 'CONTACT US' }
   ];
 
@@ -53,7 +53,7 @@ const Header = () => {
 
         {/* Logo */}
         <div className="header-logo">
-          <img src="/orange%20logo.png" alt="Infinity Vacations Logo" />
+          <img src="/logo1.png" alt="Infinity Vacations Logo" />
         </div>
 
         {/* Navigation */}
@@ -104,7 +104,7 @@ const Header = () => {
 
         {/* Desktop Action Button */}
         <div className="nav-menu">
-          <button className="primary-btn">EXPLORE</button>
+          <Link to="/packages/international" className="primary-btn">EXPLORE</Link>
         </div>
       </div>
 
@@ -172,7 +172,9 @@ const Header = () => {
                 )}
               </li>
             ))}
-            <li className="mobile-explore-btn"><button className="primary-btn">EXPLORE</button></li>
+            <li className="mobile-explore-btn" onClick={() => setMobileMenuOpen(false)}>
+              <Link to="/packages/international" className="primary-btn" style={{display: 'inline-block'}}>EXPLORE</Link>
+            </li>
           </ul>
             </motion.div>
           </>
