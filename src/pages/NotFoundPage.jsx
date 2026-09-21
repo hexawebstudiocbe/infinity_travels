@@ -12,23 +12,23 @@ const NotFoundPage = () => {
         <meta name="description" content="The page you are looking for doesn't exist." />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
-      
-      <motion.div 
+
+      <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <img src="/logo1.png" alt="Infinity Vacations Logo" className="not-found-logo" />
+        <img src="/logo.png" alt="Infinity Vacations Logo" className="not-found-logo" />
       </motion.div>
 
-      <motion.h1 
+      <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         className="not-found-title"
       >
         404
       </motion.h1>
-      <motion.h2 
+      <motion.h2
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2 }}

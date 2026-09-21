@@ -13,7 +13,7 @@ const Footer = () => {
           {/* Logo & About */}
           <div>
             <div className="footer-logo">
-              <img src="/logo1.png" alt="Infinity Vacations Logo" />
+              <img src="/logo.png" alt="Infinity Vacations Logo" />
             </div>
             <p className="footer-about-text">
               We make your travel dreams come true with trusted service, best prices and unforgettable experiences.
@@ -39,8 +39,8 @@ const Footer = () => {
                 { label: 'Home', path: '/' },
                 { label: 'About Us', path: '/about' },
                 { label: 'Corporate Tours', path: '/corporate-tours' },
-                { 
-                  label: 'Packages ▾', 
+                {
+                  label: 'Packages ▾',
                   path: '#',
                   dropdown: [
                     { label: 'Domestic', path: '/packages/domestic' },
@@ -54,7 +54,7 @@ const Footer = () => {
                 <li key={idx} className={link.dropdown ? 'footer-has-dropdown' : ''}>
                   {link.dropdown ? (
                     <div className="footer-dropdown-wrapper">
-                      <span className="footer-link" style={{cursor: 'pointer'}}>
+                      <span className="footer-link" style={{ cursor: 'pointer' }}>
                         <FaChevronRight className="footer-link-arrow" /> {link.label}
                       </span>
                       <ul className="footer-dropdown-menu">

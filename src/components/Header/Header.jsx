@@ -10,13 +10,13 @@ const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
-  
+
   const navLinks = [
     { path: '/', label: 'HOME' },
     { path: '/about', label: 'ABOUT US' },
     { path: '/corporate-tours', label: 'CORPORATE TOURS' },
-    { 
-      path: '/packages', 
+    {
+      path: '/packages',
       label: 'PACKAGES ▾',
       dropdown: [
         { path: '/packages/domestic', label: 'Domestic' },
@@ -53,7 +53,7 @@ const Header = () => {
 
         {/* Logo */}
         <div className="header-logo">
-          <img src="/logo1.png" alt="Infinity Vacations Logo" />
+          <img src="/logo.png" alt="Infinity Vacations Logo" />
         </div>
 
         {/* Navigation */}
@@ -62,15 +62,15 @@ const Header = () => {
             {navLinks.map((link) => (
               <li key={link.label} className={link.dropdown ? 'has-dropdown' : ''}>
                 {link.dropdown ? (
-                  <span 
+                  <span
                     className={`nav-link ${location.pathname.startsWith(link.path) ? 'active' : ''}`}
-                    style={{cursor: 'pointer'}}
+                    style={{ cursor: 'pointer' }}
                   >
                     {link.label}
                   </span>
                 ) : (
-                  <Link 
-                    to={link.path} 
+                  <Link
+                    to={link.path}
                     className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
                   >
                     {link.label}
@@ -112,70 +112,70 @@ const Header = () => {
       <AnimatePresence>
         {mobileMenuOpen && (
           <>
-            <motion.div 
+            <motion.div
               className="mobile-menu-backdrop"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setMobileMenuOpen(false)}
             />
-            <motion.div 
+            <motion.div
               className="mobile-menu-sidebar"
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             >
-              <button 
-                className="mobile-close-btn" 
+              <button
+                className="mobile-close-btn"
                 onClick={() => setMobileMenuOpen(false)}
                 aria-label="Close menu"
               >
                 ✕
               </button>
-            <ul className="mobile-nav-list">
-            {navLinks.map((link) => (
-              <li key={link.label} className={link.dropdown ? 'mobile-has-dropdown' : ''}>
-                {link.dropdown ? (
-                  <span 
-                    className={`nav-link ${location.pathname.startsWith(link.path) ? 'active' : ''}`}
-                    style={{cursor: 'pointer'}}
-                    onClick={() => setActiveDropdown(activeDropdown === link.label ? null : link.label)}
-                  >
-                    {link.label}
-                  </span>
-                ) : (
-                  <Link 
-                    to={link.path} 
-                    className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
-                    onClick={() => {
-                      setMobileMenuOpen(false);
-                    }}
-                  >
-                    {link.label}
-                  </Link>
-                )}
-                {link.dropdown && activeDropdown === link.label && (
-                  <ul className="mobile-dropdown-menu">
-                    {link.dropdown.map(dropItem => (
-                      <li key={dropItem.label}>
-                        <Link 
-                          to={dropItem.path} 
-                          className="mobile-dropdown-link"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          {dropItem.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
-            <li className="mobile-explore-btn" onClick={() => setMobileMenuOpen(false)}>
-              <Link to="/packages/international" className="primary-btn" style={{display: 'inline-block'}}>EXPLORE</Link>
-            </li>
-          </ul>
+              <ul className="mobile-nav-list">
+                {navLinks.map((link) => (
+                  <li key={link.label} className={link.dropdown ? 'mobile-has-dropdown' : ''}>
+                    {link.dropdown ? (
+                      <span
+                        className={`nav-link ${location.pathname.startsWith(link.path) ? 'active' : ''}`}
+                        style={{ cursor: 'pointer' }}
+                        onClick={() => setActiveDropdown(activeDropdown === link.label ? null : link.label)}
+                      >
+                        {link.label}
+                      </span>
+                    ) : (
+                      <Link
+                        to={link.path}
+                        className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
+                        onClick={() => {
+                          setMobileMenuOpen(false);
+                        }}
+                      >
+                        {link.label}
+                      </Link>
+                    )}
+                    {link.dropdown && activeDropdown === link.label && (
+                      <ul className="mobile-dropdown-menu">
+                        {link.dropdown.map(dropItem => (
+                          <li key={dropItem.label}>
+                            <Link
+                              to={dropItem.path}
+                              className="mobile-dropdown-link"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              {dropItem.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
+                ))}
+                <li className="mobile-explore-btn" onClick={() => setMobileMenuOpen(false)}>
+                  <Link to="/packages/international" className="primary-btn" style={{ display: 'inline-block' }}>EXPLORE</Link>
+                </li>
+              </ul>
             </motion.div>
           </>
         )}
