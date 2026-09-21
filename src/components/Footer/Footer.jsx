@@ -48,7 +48,7 @@ const Footer = () => {
                   ]
                 },
                 { label: 'Services', path: '/services' },
-                { label: 'Gallery', path: '/gallery' },
+                // { label: 'Gallery', path: '/gallery' },
                 { label: 'Contact Us', path: '/contact' }
               ].map((link, idx) => (
                 <li key={idx} className={link.dropdown ? 'footer-has-dropdown' : ''}>
