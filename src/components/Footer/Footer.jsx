@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaFacebookF, FaInstagram, FaWhatsapp, FaYoutube, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaChevronRight } from 'react-icons/fa';
+import { FaInstagram, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaChevronRight, FaLinkedin } from 'react-icons/fa';
+import { FaThreads } from 'react-icons/fa6';
 import './Footer.css';
 
 const Footer = () => {
@@ -18,11 +19,15 @@ const Footer = () => {
               We make your travel dreams come true with trusted service, best prices and unforgettable experiences.
             </p>
             <div className="footer-socials">
-              {[FaFacebookF, FaInstagram, FaWhatsapp, FaYoutube].map((Icon, idx) => (
-                <a key={idx} href="#" className="footer-social-link">
-                  <Icon size={16} />
-                </a>
-              ))}
+              <a href="https://www.linkedin.com/in/infinityvacations-holidays-828404438/" target="_blank" rel="noopener noreferrer" className="footer-social-link">
+                <FaLinkedin size={16} />
+              </a>
+              <a href="https://www.instagram.com/infinityvacations.holidays?utm_source=qr&stkn=MTlvMnpyMWJpbHp2MA==" target="_blank" rel="noopener noreferrer" className="footer-social-link">
+                <FaInstagram size={16} />
+              </a>
+              <a href="https://www.threads.com/@infinityvacations.holidays" target="_blank" rel="noopener noreferrer" className="footer-social-link">
+                <FaThreads size={16} />
+              </a>
             </div>
           </div>
 

@@ -15,7 +15,7 @@ import TermsAndConditionsPage from './pages/TermsAndConditionsPage';
 import CancellationPolicyPage from './pages/CancellationPolicyPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import Footer from './components/Footer/Footer';
-import WhatsAppCTA from './components/CTA/WhatsAppCTA';
+import SocialFloaters from './components/CTA/SocialFloaters';
 import './index.css';
 
 function App() {
@@ -48,7 +48,7 @@ function App() {
             </Routes>
           </main>
 
-          <WhatsAppCTA />
+          <SocialFloaters />
           <Footer />
         </div>
       </Router>
