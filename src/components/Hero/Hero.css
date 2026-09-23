@@ -118,3 +118,18 @@
   white-space: pre-line;
   color: #fff;
 }
+
+/* Responsive Videos */
+.hero-video-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hero-video-desktop {
+    display: none;
+  }
+  
+  .hero-video-mobile {
+    display: block;
+  }
+}

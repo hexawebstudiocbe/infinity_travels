@@ -15,9 +15,6 @@ const CancellationPolicyPage = () => {
       <h1 className="legal-title">Cancellation & Refund Policy</h1>
       
       <div className="legal-content">
-        <p className="legal-date">
-          Effective Date: [Date]
-        </p>
         
         <p className="legal-text">
           At Infinity Vacations, cancellation and refund conditions may vary depending on the travel service booked and the applicable terms of the relevant supplier.

@@ -81,10 +81,17 @@ const Footer = () => {
           <div>
             <h3 className="footer-title">OUR SERVICES</h3>
             <ul className="footer-links">
-              {['Flight Booking', 'Hotel Booking', 'Visa Assistance', 'Travel Insurance', 'Airport Transfers', 'Group & Corporate Tours'].map((link, idx) => (
+              {[
+                { label: 'Flight Booking', hash: '#flight-booking' },
+                { label: 'Hotel Booking', hash: '#hotel-reservations' },
+                { label: 'Visa Assistance', hash: '#visa-passport-assistance' },
+                { label: 'Travel Insurance', hash: '#travel-insurance' },
+                { label: 'Holiday Packages', hash: '#holiday-packages' },
+                { label: 'Group & Corporate Tours', hash: '#mice-events' }
+              ].map((link, idx) => (
                 <li key={idx}>
-                  <Link to="/services" className="footer-link">
-                    <FaChevronRight className="footer-link-arrow" /> {link}
+                  <Link to={`/services${link.hash}`} className="footer-link">
+                    <FaChevronRight className="footer-link-arrow" /> {link.label}
                   </Link>
                 </li>
               ))}

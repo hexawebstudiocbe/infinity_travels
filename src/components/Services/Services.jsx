@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaPlaneDeparture, FaHotel, FaCampground, FaPassport, FaShieldAlt, FaSuitcaseRolling, FaUsers } from 'react-icons/fa';
 import './Services.css';
@@ -63,6 +64,19 @@ const servicesData = [
 ];
 
 const Services = () => {
+  const location = useLocation();
+
+  React.useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.substring(1));
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location.hash]);
+
   return (
     <div className="services-page-wrapper">
       {/* Top Section: Header & Icon Grid */}
@@ -103,7 +117,7 @@ const Services = () => {
             {servicesData.map((service, index) => {
               const isEven = index % 2 !== 0; // if index 1, 3, 5 etc, reverse layout
               return (
-                <div key={service.id} className={`service-detail-row ${isEven ? 'row-reverse' : ''}`}>
+                <div key={service.id} id={service.title.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')} className={`service-detail-row ${isEven ? 'row-reverse' : ''}`}>
                   <motion.div 
                     className="service-detail-image"
                     initial={{ opacity: 0, x: isEven ? 50 : -50 }}

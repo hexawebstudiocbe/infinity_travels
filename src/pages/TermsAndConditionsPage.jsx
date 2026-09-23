@@ -15,9 +15,6 @@ const TermsAndConditionsPage = () => {
       <h1 className="legal-title">Terms & Conditions</h1>
       
       <div className="legal-content">
-        <p className="legal-date">
-          Effective Date: [Date]
-        </p>
         
         <p className="legal-text">
           Welcome to Infinity Vacations. By accessing or using our website, services, or booking any travel product through us, you agree to the following Terms & Conditions.

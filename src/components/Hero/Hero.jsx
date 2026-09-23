@@ -14,15 +14,28 @@ const features = [
 const Hero = () => {
   return (
     <section className="hero-section">
-      {/* Background Video */}
+      {/* Background Video for Desktop/Tablet */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="hero-video"
+        style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+        className="hero-video hero-video-desktop"
       >
-        <source src="/vid.mp4" type="video/mp4" />
+        <source src="/video.mp4" type="video/mp4" />
+      </video>
+
+      {/* Background Video for Mobile */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+        className="hero-video hero-video-mobile"
+      >
+        <source src="/videos.mp4" type="video/mp4" />
       </video>
 
       {/* Dark overlay to make text readable */}

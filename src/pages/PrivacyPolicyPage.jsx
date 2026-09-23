@@ -15,9 +15,6 @@ const PrivacyPolicyPage = () => {
       <h1 className="legal-title">Privacy Policy</h1>
       
       <div className="legal-content">
-        <p className="legal-date">
-          Effective Date: [Date]
-        </p>
         
         <p className="legal-text">
           Infinity Vacations respects your privacy and is committed to protecting personal information provided by customers and website visitors.
