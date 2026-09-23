@@ -1,4 +1,8 @@
 /* Services Top Grid */
+.services-page-wrapper {
+  overflow-x: hidden;
+}
+
 .services-overview-section {
   background-color: var(--bg-dark);
   padding-bottom: 60px;
