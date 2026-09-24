@@ -177,7 +177,8 @@
 }
 
 .dropdown-link:hover {
-  background-color: var(--bg-light, #f8f9fa); /* Fallback */
+  background-color: var(--bg-light, #f8f9fa);
+  /* Fallback */
   color: var(--color-primary);
 }
 
@@ -236,8 +237,8 @@
   .nav-menu {
     display: none;
   }
-  
+
   .mobile-toggle {
     display: block;
   }
-}
+}

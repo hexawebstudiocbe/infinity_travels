@@ -38,6 +38,9 @@ const CorporateAbout = () => {
           >
             <h2 className="about-title">About Us</h2>
             <h3 className="about-subtitle">Infinity Vacations – Your Corporate Travel Partner</h3>
+            <div style={{ marginTop: '15px', display: 'inline-block', backgroundColor: 'var(--color-primary, #1ea3b1)', padding: '6px 18px', borderRadius: '20px', color: '#fff', fontWeight: '600', fontSize: '0.9rem', letterSpacing: '0.5px' }}>
+              📍 Headquarters: Coimbatore &nbsp;|&nbsp; ✈️ Service - All Over India
+            </div>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

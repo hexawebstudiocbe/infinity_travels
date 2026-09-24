@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaWhatsapp, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaThreads } from 'react-icons/fa6';
 import './SocialFloaters.css';
 
 const SocialFloaters = () => {
@@ -42,6 +43,16 @@ const SocialFloaters = () => {
         aria-label="Connect with us on LinkedIn"
       >
         <FaLinkedin size={32} />
+      </a>
+      
+      <a 
+        href="https://www.threads.net/" 
+        className="social-floater threads"
+        target="_blank" 
+        rel="noopener noreferrer"
+        aria-label="Connect with us on Threads"
+      >
+        <FaThreads size={32} />
       </a>
     </div>
   );

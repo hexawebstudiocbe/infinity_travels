@@ -64,6 +64,10 @@ const Hero = () => {
           <p className="hero-desc">
             Unforgettable Journeys.<br/>Endless Memories.
           </p>
+          <div style={{ marginBottom: '30px', display: 'inline-block', backgroundColor: 'rgba(30, 163, 177, 0.2)', border: '1px solid var(--color-primary)', padding: '8px 15px', borderRadius: '30px', fontSize: '0.9rem', fontWeight: 'bold', letterSpacing: '1px', color: '#fff' }}>
+            🌟 SERVICE - ALL OVER INDIA
+          </div>
+          <br/>
           <Link to="/packages/international" className="primary-btn hero-btn" style={{display: 'inline-block', textDecoration: 'none'}}>
             EXPLORE PACKAGES <span>»</span>
           </Link>

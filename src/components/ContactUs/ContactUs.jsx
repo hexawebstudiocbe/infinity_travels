@@ -117,7 +117,8 @@ const ContactUs = () => {
               </div>
               <div className="info-text">
                 <h4>Location</h4>
-                <p>Coimbatore, Tamil Nadu, India</p>
+                <p>Headquarters: Coimbatore</p>
+                <p style={{ marginTop: '4px', fontSize: '0.9em', color: 'var(--color-primary, #1ea3b1)' }}>Service - All Over India</p>
               </div>
             </div>
           </div>

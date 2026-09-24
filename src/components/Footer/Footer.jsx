@@ -121,7 +121,10 @@ const Footer = () => {
                 <div className="footer-contact-icon-wrapper">
                   <FaMapMarkerAlt className="footer-contact-icon" />
                 </div>
-                <div>Coimbatore, Tamil Nadu, India</div>
+                <div>
+                  <div>Headquarters: Coimbatore</div>
+                  <div style={{ marginTop: '4px', fontSize: '0.9em', color: 'var(--color-primary, #1ea3b1)' }}>Service - All Over India</div>
+                </div>
               </li>
             </ul>
           </div>

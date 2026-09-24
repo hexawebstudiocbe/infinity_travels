@@ -39,6 +39,10 @@
   background-color: #0077b5;
 }
 
+.social-floater.threads {
+  background-color: #000000;
+}
+
 @media (max-width: 768px) {
   .social-floaters {
     bottom: 15px;
