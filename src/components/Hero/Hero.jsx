@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FaTag, FaSuitcase, FaHeadset, FaShieldAlt } from 'react-icons/fa';
@@ -12,30 +12,30 @@ const features = [
 ];
 
 const Hero = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <section className="hero-section">
-      {/* Background Video for Desktop/Tablet */}
+      {/* Background Video dynamically loaded based on screen size to save bandwidth */}
       <video
+        key={isMobile ? 'mobile' : 'desktop'}
         autoPlay
         loop
         muted
         playsInline
+        preload="auto"
         style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-        className="hero-video hero-video-desktop"
+        className="hero-video"
       >
-        <source src="/video.mp4" type="video/mp4" />
-      </video>
-
-      {/* Background Video for Mobile */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-        className="hero-video hero-video-mobile"
-      >
-        <source src="/videos.mp4" type="video/mp4" />
+        <source src={isMobile ? "/videos.mp4" : "/video.mp4"} type="video/mp4" />
       </video>
 
       {/* Dark overlay to make text readable */}
