@@ -13,6 +13,7 @@ const features = [
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -23,7 +24,18 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="hero-section">
+    <section className="hero-section" style={{ backgroundColor: '#000' }}>
+      {/* Loading Spinner until video is ready */}
+      {!isVideoLoaded && (
+        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 1, backgroundColor: '#000' }}>
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
+            style={{ width: '40px', height: '40px', border: '4px solid rgba(255,255,255,0.3)', borderTop: '4px solid #fff', borderRadius: '50%' }}
+          />
+        </div>
+      )}
+
       {/* Background Video dynamically loaded based on screen size to save bandwidth */}
       <video
         key={isMobile ? 'mobile' : 'desktop'}
@@ -32,7 +44,9 @@ const Hero = () => {
         muted
         playsInline
         preload="auto"
-        style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+        onLoadedData={() => setIsVideoLoaded(true)}
+        /* Add a poster image here for instant loading. Example: poster={isMobile ? "/videos-poster.jpg" : "/video-poster.jpg"} */
+        style={{ objectFit: 'cover', width: '100%', height: '100%', opacity: isVideoLoaded ? 1 : 0, transition: 'opacity 0.5s ease' }}
         className="hero-video"
       >
         <source src={isMobile ? "/videos.mp4" : "/video.mp4"} type="video/mp4" />
