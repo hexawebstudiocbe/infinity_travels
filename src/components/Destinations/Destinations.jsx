@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 import './Destinations.css';
 
 const destinations = [
-  { id: 1, name: 'THAILAND', price: '₹24,999', img: 'https://images.unsplash.com/photo-1558486012-817176f84c6d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60' },
+  { id: 1, name: 'THAILAND', price: '₹24,999', img: '/thailand.jpg' },
   { id: 2, name: 'MALAYSIA', price: '₹26,999', img: '/malaysia.jpg' },
-  { id: 3, name: 'SINGAPORE', price: '₹23,999', img: 'https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60' },
-  { id: 4, name: 'BALI', price: '₹28,999', img: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60' },
-  { id: 5, name: 'VIETNAM', price: '₹27,999', img: 'https://images.unsplash.com/photo-1528127269322-539801943592?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60' },
+  { id: 3, name: 'SINGAPORE', price: '₹23,999', img: '/singapore.jpg' },
+  { id: 4, name: 'BALI', price: '₹28,999', img: '/bali.jpg' },
+  { id: 5, name: 'VIETNAM', price: '₹27,999', img: '/vietnam.jpg' },
   { id: 6, name: 'CAMBODIA', price: '₹26,999', img: '/cambodia.jpg' },
 ];
 
