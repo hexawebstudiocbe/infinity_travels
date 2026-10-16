@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaInstagram, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaChevronRight, FaLinkedin } from 'react-icons/fa';
+import { FaInstagram, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaChevronRight, FaLinkedin, FaFacebookF, FaWhatsapp, FaTwitter } from 'react-icons/fa';
 import { FaThreads } from 'react-icons/fa6';
 import './Footer.css';
 
@@ -19,13 +19,22 @@ const Footer = () => {
               We make your travel dreams come true with trusted service, best prices and unforgettable experiences.
             </p>
             <div className="footer-socials">
-              <a href="https://www.linkedin.com/in/infinityvacations-holidays-828404438/" target="_blank" rel="noopener noreferrer" className="footer-social-link">
-                <FaLinkedin size={16} />
+              <a href="https://www.facebook.com/infinityvacations.holidays" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Follow us on Facebook">
+                <FaFacebookF size={16} />
               </a>
-              <a href="https://www.instagram.com/infinityvacations.holidays?utm_source=qr&stkn=MTlvMnpyMWJpbHp2MA==" target="_blank" rel="noopener noreferrer" className="footer-social-link">
+              <a href="https://www.instagram.com/infinityvacations.holidays?utm_source=qr&stkn=MTlvMnpyMWJpbHp2MA==" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Follow us on Instagram">
                 <FaInstagram size={16} />
               </a>
-              <a href="https://www.threads.com/@infinityvacations.holidays" target="_blank" rel="noopener noreferrer" className="footer-social-link">
+              <a href="https://wa.me/919150041859" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Chat with us on WhatsApp">
+                <FaWhatsapp size={16} />
+              </a>
+              <a href="https://twitter.com/infinityvacations" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Follow us on Twitter">
+                <FaTwitter size={16} />
+              </a>
+              <a href="https://www.linkedin.com/in/infinityvacations-holidays-828404438/" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Connect with us on LinkedIn">
+                <FaLinkedin size={16} />
+              </a>
+              <a href="https://www.threads.com/@infinityvacations.holidays" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Connect with us on Threads">
                 <FaThreads size={16} />
               </a>
             </div>

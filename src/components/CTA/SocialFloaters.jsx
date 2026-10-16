@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaWhatsapp, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaWhatsapp, FaInstagram, FaLinkedin, FaFacebookF } from 'react-icons/fa';
 import { FaThreads } from 'react-icons/fa6';
 import './SocialFloaters.css';
 
@@ -36,6 +36,16 @@ const SocialFloaters = () => {
       </a>
       
       <a 
+        href="https://www.facebook.com/infinityvacations.holidays" 
+        className="social-floater facebook"
+        target="_blank" 
+        rel="noopener noreferrer"
+        aria-label="Follow us on Facebook"
+      >
+        <FaFacebookF size={26} />
+      </a>
+      
+      <a 
         href="https://www.linkedin.com/in/infinityvacations-holidays-828404438/" 
         className="social-floater linkedin"
         target="_blank" 
@@ -54,6 +64,8 @@ const SocialFloaters = () => {
       >
         <FaThreads size={32} />
       </a>
+
+      
     </div>
   );
 };
